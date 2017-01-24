@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-cd $HOME/BDReborn
+cd $HOME/sudo_radmhr021
+
 
 install() {
 	    cd tg
