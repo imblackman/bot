@@ -76,17 +76,17 @@ end
 
 local function run(msg, matches)
 	if is_mod(msg) then
-		if matches[2]:lower() == 'filter' then
+		if matches[2]:lower() == 'فیلتر' then
 			local name = string.sub(matches[3], 1, 50)
 			local text = addword(msg, name)
 			return text
 		end
-		if matches[2]:lower() == 'filterlist' then
+		if matches[2]:lower() == 'لیست فیلتر' then
 			return list_badwords(msg)
-		elseif matches[2]:lower() == 'clean' then
+		elseif matches[2]:lower() == 'پاک کردن' then
 			local number = '1'
 			return clear_badwords(msg, number)
-		elseif matches[2]:lower() == 'unfilter' then
+		elseif matches[2]:lower() == 'ازاد' then
 			return clear_badword(msg, matches[3])
 		end
 	end
@@ -94,10 +94,10 @@ end
 
 return {
   patterns = {
-	"^([!/#])([Ff][Ii][Ll][Tt][Ee][Rr]) (.*)$",
-	"^([!/#])([Uu][Nn][Ff][Ii][Ll][Tt][Ee][Rr]) (.*)$",
-    "^([!/#])([Ff][Ii][Ll][Tt][Ee][Rr][Ll][Ii][Ss][Tt])$",
-    "^([!/#])([Cc][Ll][Ee][Aa][Nn]) ([Ff][Ii][Ll][Tt][Ee][Rr][Ll][Ii][Ss][Tt])$",
+	"^([!/#])(فیلتر) (.*)$",
+	"^([!/#])(ازاد) (.*)$",
+    "^([!/#])(لیست فیلتر)$",
+    "^([!/#])(پاک کردن) (لیست فیلتر)$",
   },
   run = run, 
   pre_process = pre_process
