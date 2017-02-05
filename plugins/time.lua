@@ -22,6 +22,6 @@ end
 
 return { patterns = { "^time$", "^ساعت$" }, run = run } 
 
--- End
--- By @To0fan
--- CHANNEL: @LuaError
+-- 
+-- 
+-- 
