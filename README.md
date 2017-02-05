@@ -1,4 +1,4 @@
-# [BDreborn](https://telegram.me/BDreborn)
+# [TD](https://telegram.me/)
 
 **An advanced and powerful administration bot based on NEW TG-CLI
 
@@ -22,13 +22,13 @@
 cd $HOME
 git clone https://github.com/Firstcode2/sudo_radmhr021.git
 cd sudo_radmhr021
-chmod +x beyond.sh
-./beyond.sh install
-./beyond.sh # Enter a phone number & confirmation code.
+chmod +x launch.sh
+./launch.sh install
+./launch.sh # Enter a phone number & confirmation code.
 ```
 ### One command
 To install everything in one command, use:
 ```sh
-cd $HOME && git clone https://github.com/Firstcode2/sudo_radmhr021.git && cd sudo_radmhr021 && chmod +x beyond.sh && ./beyond.sh install && ./beyond.sh
+cd $HOME && git clone https://github.com/Firstcode2/sudo_radmhr021.git && cd sudo_radmhr021 && chmod +x launch.sh && ./launch.sh install && ./launch.sh
 ```
 
