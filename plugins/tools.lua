@@ -414,7 +414,7 @@ patterns = {
 "^[!/#](adminprom) (.*)$", 
 "^[!/#](admindem) (.*)$",
 "^[!/#](leave)$",
-"^[!/#](autoleave) (.
+"^[!/#](autoleave) (.*)$",
 "^[!/#](creategroup) (.*)$",
 "^[!/#](createsuper) (.*)$",
 "^[!/#](tosuper)$",
