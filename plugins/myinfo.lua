@@ -1,4 +1,4 @@
-﻿-- Begin myinfo.lua
+﻿
 local function run(msg, matches)
 	if matches[1]:lower() == 'اطلاعات من' then
 		function get_id(arg, data)
@@ -33,8 +33,8 @@ local function run(msg, matches)
 				else
 					rank = 'عضو عادی👤'
 				end
-				local text = '👤📄❄️اطلاعات شما:\n1⃣اسم اول:: '..data.first_name_..'\n2⃣اسم دوم: '..lastName..'\n🛂یوزرنیم: '..username..'\n👤ایدی: '..data.id_..'\nℹ️ایدی گروه: '..arg.chat_id..'\n📱شماره تلفن: '..telNum..' \n👥مقام: '..rank..''
-				tdcli.sendMessage(arg.chat_id, msg.id_, 1, text, 1, 'html')
+				local text = '👤📄❄️اطلاعات شما:\n1⃣اسم اول:: '..data.first_name_..'\n2⃣اسم دوم: '..lastName..'\n🛂یوزرنیم: '..username..'\n👤ایدی: '..data.id_..'\nℹ️ایدی گروه: '..arg.chat_id..'\n📱شماره تلفن: '..telNum..' \n👥مقام: '..rank..'\n🈁لینک شما : telegram.me/'..data.username_
+				tdcli.sendMessage(arg.chat_id, msg.id_, 1, text, 0, 'html')
 			end
 		end
 		tdcli_function({ ID = 'GetUser', user_id_ = msg.sender_user_id_, }, get_id, {chat_id=msg.chat_id_, user_id=msg.sendr_user_id_})
