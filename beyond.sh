@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-cd $HOME/sudo_radmhr021
-
-
+cd $HOME/empty
 install() {
 	    cd tg
 		sudo add-apt-repository ppa:ubuntu-toolchain-r/test
