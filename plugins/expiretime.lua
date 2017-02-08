@@ -57,27 +57,27 @@ end
 
 end
 function run(msg, matches)
-	if matches[1]:lower() == 'تنظیم تاریخ انقضا' then
+	if matches[1]:lower() == 'setexpire' then
 		if not is_sudo(msg) then return end
 		local time = os.time()
 		local buytime = tonumber(os.time())
 		local timeexpire = tonumber(buytime) + (tonumber(matches[2]) * 86400)
 		redis:hset('expiretime',msg.chat_id_,timeexpire)
-		return "تاریخ انقضا تنظیم شد به " ..matches[2].. " روز✅♻️"
+		return "*Expiration date set to* "  ..matches[2].. " day✅♻️"
 	end
-	if matches[1]:lower() == 'تاریخ انقضا' then
+	if matches[1]:lower() == 'expire' then
 		local expiretime = redis:hget ('expiretime', msg.chat_id_)
 		if not expiretime then return 'مشخص نیست❗️' else
 			local now = tonumber(os.time())
-			return (math.floor((tonumber(expiretime) - tonumber(now)) / 86400) + 1) .. "روز"
+			return (math.floor((tonumber(expiretime) - tonumber(now)) / 86400) + 1) .. " day✅♻️"
 		end
 	end
 
 end
 return {
   patterns = {
-    "^(تنظیم تاریخ انقضا) (.*)$",
-	"^(تاریخ انقضا)$",
+    "^[!/#](setexpire) (.*)$",
+	"^[!/#](expire)$",
   },
   run = run,
   pre_process = pre_process
