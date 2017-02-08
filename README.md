@@ -20,8 +20,8 @@
 ```sh
 # Let's install the bot.
 cd $HOME
-git clone https://github.com/Firstcode2/sudo_radmhr021.git
-cd sudo_radmhr021
+git clone https://github.com/Firstcode2/DJteam.git
+cd DJteam
 chmod +x beyond.sh
 ./beyond.sh install
 ./beyond.sh # Enter a phone number & confirmation code.
@@ -29,6 +29,6 @@ chmod +x beyond.sh
 ### One command
 To install everything in one command, use:
 ```sh
-cd $HOME && git clone https://github.com/Firstcode2/sudo_radmhr021.git && cd sudo_radmhr021 && chmod +x launch.sh && ./beyond.sh install && ./beyond.sh
+cd $HOME && git clone https://github.com/Firstcode2/sudo_radmhr021.git && cd DJteam && chmod +x beyond.sh && ./beyond.sh install && ./beyond.sh
 ```
 
