@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd $HOME/empty
+cd $HOME/DJteam
 install() {
 	    cd tg
 		sudo add-apt-repository ppa:ubuntu-toolchain-r/test
